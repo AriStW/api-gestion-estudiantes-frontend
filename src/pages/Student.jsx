@@ -5,6 +5,16 @@ import { getStudent } from "../services/getStudent";
 
 const oneStudent = () => {
   const { id } = useParams();
+  const [studentSelected, setstudentSelected] = useState();
+
+  const handleStudent = async () => {
+    const result = await getStudent(id);
+    console.log(result);
+  }
+  useEffect(()=>{
+    handleStudent();
+  },[id]);
+  
   return (
     <div style={{ padding: "20px" }}>
       <Typography variant="h5">Detalle del estudiante</Typography>
