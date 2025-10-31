@@ -3,9 +3,8 @@ import { useEffect, useState } from "react";
 import { useParams } from "react-router-dom";
 import { getStudent } from "../services/getStudent";
 
-const Student = () => {
+const oneStudent = () => {
   const { id } = useParams();
-
   return (
     <div style={{ padding: "20px" }}>
       <Typography variant="h5">Detalle del estudiante</Typography>
@@ -14,4 +13,4 @@ const Student = () => {
   );
 };
 
-export default Student;
+export default oneStudent;
