@@ -1,34 +1,34 @@
-import { useState } from 'react';
-import { AppBar, Button, Drawer, IconButton, Toolbar, Typography } from '@mui/material';
+import AppBar from '@mui/material/AppBar';
+import Toolbar from '@mui/material/Toolbar';
+import Typography from '@mui/material/Typography';
+import Button from '@mui/material/Button';
+import IconButton from '@mui/material/IconButton';
 import MenuIcon from '@mui/icons-material/Menu';
-import MenuDrawer from './MenuDrawer';
 
-const NavBar =() =>{
- const [isOpenDrawer, setIsOpenDrawer] = useState(false);
+
+const NavBar =({setIsOpenDrawer}) =>{
 
     return(
         <>
-        <AppBar position='static'>
-                <Toolbar>
-                  <IconButton
-                  size='large'
-                  edge='start'
-                  color='inherit'
-                  aria-label='menu'
-                  sx={{mr:2}}
-                  onClick={()=> setIsOpenDrawer(true)}>
-                  <MenuIcon />
-                  </IconButton>
-                  <Typography variant='h6' component='div' sx={{FlexGrow: 1}}>
-                    New
-                  </Typography>
-                  <Button color='inherit' >Loggin</Button>
-                </Toolbar>
-                </AppBar> 
-                 <Drawer anchor='left' open={isOpenDrawer} onClose={()=> setIsOpenDrawer(false)}>
-                     <MenuDrawer />
-                </Drawer>  
+       <AppBar position="static">
+        <Toolbar>
+          <IconButton
+            size="large"
+            edge="start"
+            color="inherit"
+            aria-label="menu"
+            sx={{ mr: 2 }}
+            onClick={()=> setIsOpenDrawer(true)}
+          >
+            <MenuIcon />
+          </IconButton>
+          <Typography variant="h6" component="div" sx={{ flexGrow: 1 }}>
+            News
+          </Typography>
+          <Button color="inherit">Login</Button>
+        </Toolbar>
+      </AppBar>
         </>
-    )
+    );
 }
 export default NavBar
