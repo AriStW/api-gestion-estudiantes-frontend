@@ -4,7 +4,7 @@ import NavBar from './components/NavBar';
 import MenuDrawer from './components/MenuDrawer';
 import ListOfStudents from './pages/ListOfStudents';
 import { Route, Routes } from 'react-router';
-import oneStudent from './pages/Student';
+import OneStudent from './pages/Student';
 
 function App() {
  const [isOpenDrawer, setIsOpenDrawer] = useState(false);
@@ -17,7 +17,7 @@ function App() {
     
       <Routes>
        <Route index path="/" element={<ListOfStudents />} />
-       <Route path="/student/:id" element={<oneStudent />} />
+       <Route path="/student/:id" element={<OneStudent />} />
       </Routes>
       </Box>
    </>

@@ -3,7 +3,7 @@ import { useEffect, useState } from "react";
 import { useParams } from "react-router-dom";
 import { getStudent } from "../services/getStudent";
 
-const oneStudent = () => {
+const OneStudent = () => {
   const { id } = useParams();
   const [studentSelected, setstudentSelected] = useState();
 
@@ -23,4 +23,4 @@ const oneStudent = () => {
   );
 };
 
-export default oneStudent;
+export default OneStudent
