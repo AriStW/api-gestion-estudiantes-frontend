@@ -1,11 +1,11 @@
 import { useEffect, useState } from "react";
-import { getStudents } from "../services/getStudent";
+import { getStudents } from "../services/getStudents";
 import CardStudents from "../components/CardStudents";
 import { CircularProgress } from "@mui/material";
-
+import { useNavigate } from "react-router";
 
 const ListOfStudents = () =>{
-
+    const navigate = useNavigate();
     const [isLoading, setIsLoading] = useState(false);
     const [studentList, setStudentList] = useState([]); 
 
@@ -14,6 +14,12 @@ const ListOfStudents = () =>{
         setStudentList(response);
         setIsLoading(false);
     }
+    
+    const handleDetailStudent = (cardStudent) =>{
+       navigate(`/student/${cardStudent._id}`);
+
+    }
+
     useEffect(()=>{
         setIsLoading(true);
         handleStudents();
@@ -29,7 +35,7 @@ const ListOfStudents = () =>{
             {!isLoading &&
                 studentList.length > 0 &&
                 studentList.map((student) => (
-                    <CardStudents key={student._id} student={student} />
+                    <CardStudents key={student._id} student={student} onClick={() => handleDetailStudent(student)} />
                 ))
             }
         </div>
