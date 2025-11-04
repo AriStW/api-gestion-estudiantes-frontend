@@ -1,33 +1,31 @@
-import List from '@mui/material/List';
-import ListItem from '@mui/material/ListItem';
-import ListItemButton from '@mui/material/ListItemButton';
-import ListItemIcon from '@mui/material/ListItemIcon';
-import ListItemText from '@mui/material/ListItemText';
+import { Drawer, List, ListItem, ListItemButton, ListItemIcon, ListItemText } from '@mui/material';
 import InboxIcon from '@mui/icons-material/MoveToInbox';
 import MailIcon from '@mui/icons-material/Mail';
-import { Drawer } from '@mui/material';
+import { NavLink } from 'react-router-dom';
 
-
-const MenuDrawer = ({isOpenDrawer, setIsOpenDrawer}) => {
+const MenuDrawer = ({ isOpenDrawer, setIsOpenDrawer }) => {
+  const navBar = [
+    { path: '/', name: 'Lista de estudiantes' },
+    { path: '/searchCourse', name: 'Buscar Curso' },
+    { path: '/matriculate', name: 'Inscripciones' }
+  ];
 
   return (
-    <>
-      <Drawer anchor='left' open={isOpenDrawer}
-        onClose={() => setIsOpenDrawer(false)}>
-        <List>
-          {['cursos', 'alumnos', 'inscribirse'].map((text, index) => (
-            <ListItem key={text} disablePadding>
-              <ListItemButton>
-                <ListItemIcon>
-                  {index % 2 === 0 ? <InboxIcon /> : <MailIcon />}
-                </ListItemIcon>
-                <ListItemText primary={text} />
-              </ListItemButton>
-            </ListItem>
-          ))}
-        </List>
-      </Drawer>
-    </>
-  )
-}
-export default MenuDrawer
+    <Drawer anchor="left" open={isOpenDrawer} onClose={() => setIsOpenDrawer(false)}>
+      <List>
+        {navBar.map(({ path, name }, index) => (
+          <ListItem key={path} disablePadding>
+            <ListItemButton component={NavLink} to={path}>
+              <ListItemIcon>
+                {index % 2 === 0 ? <InboxIcon /> : <MailIcon />}
+              </ListItemIcon>
+              <ListItemText primary={name} />
+            </ListItemButton>
+          </ListItem>
+        ))}
+      </List>
+    </Drawer>
+  );
+};
+
+export default MenuDrawer;

@@ -5,7 +5,8 @@ import MenuDrawer from './components/MenuDrawer';
 import ListOfStudents from './pages/ListOfStudents';
 import { Route, Routes } from 'react-router';
 import OneStudent from './pages/Student';
-
+import Matriculate from './pages/Matriculate/Register';
+import SearchCouse from './pages/SearchCourse/SearchCourse'
 function App() {
  const [isOpenDrawer, setIsOpenDrawer] = useState(false);
 
@@ -18,6 +19,8 @@ function App() {
       <Routes>
        <Route index path="/" element={<ListOfStudents />} />
        <Route path="/student/:id" element={<OneStudent />} />
+       <Route path="/searchCourse" element={<SearchCouse />} />
+       <Route path="/matriculate" element={<Matriculate />} />
       </Routes>
       </Box>
    </>

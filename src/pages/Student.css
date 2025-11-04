@@ -1,0 +1,21 @@
+.studentCard{
+    height: 200px;
+    width:auto ;
+    background-color: grey;
+    justify-content: space-around;
+    margin: 0 0 0 5%;
+    padding: 5%;
+}
+.studentPhoto{
+    height: 95%;
+    width: 20%;
+    background-color: #1976d2;
+    border-radius: 50%;
+    padding: 20px;
+}
+.studentDetail{
+    height: 95%;
+    width: 60%;
+    background-color: #1976d2;
+    padding: 20px;
+}
