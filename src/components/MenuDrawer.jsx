@@ -7,7 +7,7 @@ const MenuDrawer = ({ isOpenDrawer, setIsOpenDrawer }) => {
   const navBar = [
     { path: '/', name: 'Lista de estudiantes' },
     { path: '/addStudent', name: 'Ingresar nuevo alumno' },
-    { path: '/searchCourse', name: 'Buscar Curso' }
+    { path: '/searchCourse', name: 'Filtrar lista alumno por curso' }
   ];
 
   return (

@@ -6,7 +6,7 @@ import ListOfStudents from './pages/ListOfStudents/ListOfStudents.jsx';
 import { Route, Routes } from 'react-router';
 import OneStudent from './pages/Student/Student.jsx';
 import AddStudent from './pages/AddStudent/AddStudent.jsx';
-import SearchCouse from './pages/SearchCourse/SearchCourse'
+import SearchCourse from './pages/SearchCourse/SearchCourse';
 function App() {
  const [isOpenDrawer, setIsOpenDrawer] = useState(false);
 
@@ -19,7 +19,7 @@ function App() {
       <Routes>
        <Route index path="/" element={<ListOfStudents />} />
        <Route path="/student/:id" element={<OneStudent />} />
-       <Route path="/searchCourse" element={<SearchCouse />} />
+       <Route path="/searchCourse" element={<SearchCourse />} />
        <Route path="/addStudent" element={<AddStudent />} />
       </Routes>
       </Box>
