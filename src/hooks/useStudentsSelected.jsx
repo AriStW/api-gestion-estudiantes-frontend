@@ -1,21 +1,16 @@
-import { useEffect, useState } from "react";
+import { useEffect } from "react";
 import { useParams } from "react-router-dom";
-import { getStudent } from "../services/getStudent";
+import { useStudentContext } from "../context/StudentContext";
 
-const useStudentsSelected =()=>{
+const useStudentsSelected = () => {
+  const { id } = useParams();
+  const { studentSelected, loadStudent, loading } = useStudentContext();
 
-     const { id } = useParams();
-  const [studentSelected, setstudentSelected] = useState();
+  useEffect(() => {
+    if (id) loadStudent(id);
+  }, [id]);
 
-  const handleStudent = async () => {
-    const result = await getStudent(id);
-    setstudentSelected(result);
-  }
-  useEffect(()=>{
-    handleStudent();
-  },[id]);
-    return(
-        {studentSelected,id})
-}
+  return { id, studentSelected, loading };
+};
 
 export default useStudentsSelected;

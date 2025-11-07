@@ -101,7 +101,7 @@ return(
           variant="contained"
           color="primary"
         >
-          Registrar Estudiante
+          {buttonLabel}
         </Button>
 
         <Button
@@ -110,7 +110,7 @@ return(
           color="primary"
           onClick={handleReset}
         >
-          {buttonLabel}
+          Limpiar
         </Button>
       </Box>
     </Box>

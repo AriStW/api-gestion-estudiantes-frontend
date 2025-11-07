@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from 'react';
-import StudentForm from "../../components/studentForm";
+import StudentForm from "../../components/StudentForm";
 import {
   TextField,
   Button,
