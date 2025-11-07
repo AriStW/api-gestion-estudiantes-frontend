@@ -1,6 +1,6 @@
 import { useEffect, useState } from "react";
-import { getStudents } from "../services/getStudents";
-import CardStudents from "../components/CardStudents";
+import { getStudents } from "../../services/getStudents";
+import CardStudents from "../../components/CardStudents";
 import { CircularProgress } from "@mui/material";
 import { useNavigate } from "react-router";
 

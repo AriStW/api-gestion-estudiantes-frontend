@@ -1,21 +1,21 @@
 import { Card, CardContent, CardMedia, Chip, Typography } from "@mui/material";
-import setStudentsSelected from "../hooks/setStudentsSelected";
+import useStudentsSelected from "../../hooks/useStudentsSelected";
 import "./Student.css";
 
-const OneStudent = () => {
-  const { studentSelected, id } = setStudentsSelected();
+const OneStudent = ({onEdit,onDelete}) => {
+  const { studentSelected, id } = useStudentsSelected();
   console.log(studentSelected);
   return (
     <>
       <Typography variant="h5"
-      textAlign="center"
-      color="primary">
+        textAlign="center"
+        color="primary">
         <br />Detalle alumno:</Typography>
       <Card className="studentCard" sx={{
         display: 'flex',
         flexDirection: 'row'
       }}>
-        <CardContent  className="studentPhoto" sx={{
+        <CardContent className="studentPhoto" sx={{
           flexShrink: 0
         }}>
         </CardContent>
@@ -24,7 +24,7 @@ const OneStudent = () => {
           display: "flex",
           flexDirection: "column",
           justifyContent: "space-around",
-          alignItems:"center"
+          alignItems: "center"
         }}>
           <Typography variant="h4">{studentSelected?.nombre} {studentSelected?.apellido}</Typography>
           {!studentSelected && (
@@ -36,7 +36,10 @@ const OneStudent = () => {
             Curso: {studentSelected?.curso.map(c => c.charAt(0).toUpperCase() + c.slice(1)).join(", ")}
           </Typography>
           <Chip label={`cursa: ${studentSelected?.curso.length} materias`} color="success" />
-        </CardContent></Card>
+        </CardContent>
+        
+      </Card>
+
     </>
   );
 };

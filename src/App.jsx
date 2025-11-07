@@ -2,9 +2,9 @@ import { useState } from 'react';
 import Box from '@mui/material/Box';
 import NavBar from './components/NavBar';
 import MenuDrawer from './components/MenuDrawer';
-import ListOfStudents from './pages/ListOfStudents';
+import ListOfStudents from './pages/ListOfStudents/ListOfStudents.jsx';
 import { Route, Routes } from 'react-router';
-import OneStudent from './pages/Student';
+import OneStudent from './pages/Student/Student.jsx';
 import AddStudent from './pages/AddStudent/AddStudent.jsx';
 import SearchCouse from './pages/SearchCourse/SearchCourse'
 function App() {

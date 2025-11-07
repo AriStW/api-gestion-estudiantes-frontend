@@ -31,4 +31,4 @@ const NavBar =({setIsOpenDrawer}) =>{
         </>
     );
 }
-export default NavBar
+export default NavBar;

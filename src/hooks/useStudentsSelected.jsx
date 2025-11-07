@@ -2,7 +2,7 @@ import { useEffect, useState } from "react";
 import { useParams } from "react-router-dom";
 import { getStudent } from "../services/getStudent";
 
-const setStudentsSelected =()=>{
+const useStudentsSelected =()=>{
 
      const { id } = useParams();
   const [studentSelected, setstudentSelected] = useState();
@@ -18,4 +18,4 @@ const setStudentsSelected =()=>{
         {studentSelected,id})
 }
 
-export default setStudentsSelected
+export default useStudentsSelected;
