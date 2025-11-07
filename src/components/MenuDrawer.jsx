@@ -6,8 +6,8 @@ import { NavLink } from 'react-router-dom';
 const MenuDrawer = ({ isOpenDrawer, setIsOpenDrawer }) => {
   const navBar = [
     { path: '/', name: 'Lista de estudiantes' },
-    { path: '/searchCourse', name: 'Buscar Curso' },
-    { path: '/matriculate', name: 'Inscripciones' }
+    { path: '/addStudent', name: 'Ingresar nuevo alumno' },
+    { path: '/searchCourse', name: 'Buscar Curso' }
   ];
 
   return (

@@ -4,15 +4,17 @@ const CardStudents = ({ student,onClick }) => {
     return (
         <Card sx={{ marginBottom: 2 }}>
             <CardActionArea onClick={() => onClick(student)}>
-                <CardContent sx={{ display: "flex", flexDirection: "column", gap: "10%" }}>
+                <CardContent sx={{ display: "flex", flexDirection: "row", gap: "10%" }}>
                     <Typography>Nombre: {student.nombre}</Typography>
                     <Typography>Apellido: {student.apellido}</Typography>
+                     
                     <Typography>
-                        <Chip
+                    {student.curso.map(c => c.charAt(0).toUpperCase() + c.slice(1)).join(", ")}
+                    </Typography>
+                    <Chip
                             label={`Cantidad cursos: ${student.curso.length}`}
                             color="success"
                         />
-                    </Typography>
                 </CardContent>
             </CardActionArea>
         </Card>
