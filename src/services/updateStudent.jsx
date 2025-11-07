@@ -3,8 +3,8 @@ const TOKEN = import.meta.env.VITE_TOKEN_STUDENTS
 
 //const STUDENTS = '/api/estudiantes';
 
-export const updateStudent = async (body,studentId) =>{
-    const response = await fetch(`${STUDENTS}/${studentId}`,{
+export const updateStudent = async (id,body) =>{
+    const response = await fetch(`${STUDENTS}/${id}`,{
     method: "PUT",
     headers: {
       "content-type": "application/json",
@@ -15,5 +15,6 @@ export const updateStudent = async (body,studentId) =>{
     });
  //const response = await fetch(STUDENTS);
     const result = await response.json();
+    console.log("resultado de put: ",result)
     return result;
 }
