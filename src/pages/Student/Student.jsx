@@ -88,7 +88,7 @@ const OneStudent = () => {
         </Box>
       </Drawer>
     </>
-  );git status
+  );
 };
 
 export default OneStudent;
