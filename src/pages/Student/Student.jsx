@@ -65,10 +65,10 @@ const OneStudent = () => {
       </Card>
 
       <Box sx={{ mt: 3, display: "flex", gap: 2, justifyContent: "center" }}>
-        <Button color="warning" variant="contained" onClick={() => setOpen(true)}>
+        <Button color="primary" variant="contained" onClick={() => setOpen(true)}>
           Editar
         </Button>
-        <Button color="error" variant="contained" onClick={() => handleDelete(id)}>
+        <Button color="primary" variant="contained" onClick={() => handleDelete(id)}>
           Eliminar
         </Button>
       </Box>

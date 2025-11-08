@@ -10,7 +10,7 @@ const NavBar =({setIsOpenDrawer}) =>{
 
     return(
         <>
-       <AppBar position="static">
+       <AppBar position="static"  >
         <Toolbar>
           <IconButton
             size="large"
@@ -23,7 +23,7 @@ const NavBar =({setIsOpenDrawer}) =>{
             <MenuIcon />
           </IconButton>
           <Typography variant="h6" component="div" sx={{ flexGrow: 1 }}>
-            News
+            App Gestion de estudiantes
           </Typography>
           <Button color="inherit">Login</Button>
         </Toolbar>
