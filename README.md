@@ -17,13 +17,41 @@ Proyecto frontend desarrollado con **React** y **Material UI** para gestionar es
 
 ## Estructura del proyecto
 src/
-├─ components/ # Componentes reutilizables (StudentEditForm, StudentForm, etc.)
-├─ context/ # Contextos globales (StudentContext)
-├─ hooks/ # Custom hooks (useUpdateStudent, useDeleteStudent, etc.)
-├─ pages/ # Páginas principales (Student, AddStudent, SearchCourse)
-├─ services/ # Servicios para API (updateStudent, deleteStudent, searchStudent)
-├─ App.jsx # Componente raíz
-└─ main.jsx # Entrada principal de la aplicación
+├── components/
+│   ├── CardStudents.jsx
+│   ├── MenuDrawer.jsx
+│   ├── NavBar.jsx
+│   ├── studentEditForm.jsx
+│   ├──studentForm.jsx
+│   
+├── context/
+│   └──StudentContext.jsx
+│
+├── hooks/
+│   ├── useDeleteStudent.js
+│   ├── useEditDrawer.js
+│   ├── useStudentsSelected.js
+│   └── useUpdateStudent.js
+│
+├── pages/
+│   ├── AddStudent/
+│   │   └──AddStudent.jsx
+│   ├── ListOfStudent/
+│   │   └──ListOfStudent.jsx
+│   ├── SearchCourse/
+│   │   └──SearchCourse.jsx
+│   └── Student/
+│       └──Student.jsx
+│
+├── Services/
+│   ├── deleteStudent.js
+│   ├── filterListStudentByCourse.js
+│   ├── getStudent.js
+│   ├── getStudents.js
+│   ├── postStudent.js
+│   └── updateStudent.js
+│
+└── App.jsx\
 
 ___
 
@@ -31,7 +59,7 @@ ___
 
 1. Clonar el repositorio:
 
-git clone [Aqui]<https://github.com/AriStW/api-gestion-estudiantes-frontend>
+git clone <https://github.com/AriStW/api-gestion-estudiantes-frontend>
 cd api-gestion-estudiantes-frontend
 
 2. Paquetes 
