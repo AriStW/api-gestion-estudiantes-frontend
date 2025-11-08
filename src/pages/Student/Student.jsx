@@ -12,7 +12,7 @@ import {
 import useStudentsSelected from "../../hooks/useStudentsSelected";
 import useDeleteStudent from "../../hooks/useDeleteStudent";
 import useUpdateStudent from "../../hooks/useUpdateStudent";
-import StudentEditForm from "../../components/StudentEditForm";
+import StudentEditForm from "../../components/StudentEditForms";
 import "./Student.css";
 
 const OneStudent = () => {
